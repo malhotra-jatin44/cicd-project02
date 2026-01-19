@@ -31,7 +31,7 @@ jobs:
 
       - name: Build & Push Orders Image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/orderscicd:latest ./backend/orders-service
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/orderscicd:latest ./backends/orders-service
           docker push ${{ secrets.DOCKER_USERNAME }}/orderscicd:latest
 
       - name: Build & Push UI Image
