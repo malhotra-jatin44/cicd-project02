@@ -1,0 +1,12 @@
+CREATE TABLE IF NOT EXISTS products (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255),
+  price INT
+);
+
+INSERT IGNORE INTO products (id, name, price) 
+VALUES 
+(1,'Laptop',70000),
+(2,'Phone',30000),
+(3,'Insta360',50000),
+(4,'Headphones',5000);
