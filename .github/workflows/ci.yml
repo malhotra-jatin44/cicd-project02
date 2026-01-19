@@ -36,5 +36,5 @@ jobs:
 
       - name: Build & Push UI Image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/uicicd:latest /frontend/ui
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/uicicd:latest ./frontend/uis
           docker push ${{ secrets.DOCKER_USERNAME }}/uicicd:latest
