@@ -21,20 +21,20 @@ jobs:
 
       - name: Build & Push Catalog Image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/catalog:latest ./catalog
-          docker push ${{ secrets.DOCKER_USERNAME }}/catalog:latest
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/catalogcicd:latest ./backend/catalog-service
+          docker push ${{ secrets.DOCKER_USERNAME }}/catalogcicd:latest
 
       - name: Build & Push Cart Image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/cart:latest ./cart
-          docker push ${{ secrets.DOCKER_USERNAME }}/cart:latest
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/cartcicd:latest ./backend/cart-service
+          docker push ${{ secrets.DOCKER_USERNAME }}/cartcicd:latest
 
       - name: Build & Push Orders Image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/orders:latest ./orders
-          docker push ${{ secrets.DOCKER_USERNAME }}/orders:latest
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/orderscicd:latest ./backend/orders-service
+          docker push ${{ secrets.DOCKER_USERNAME }}/orderscicd:latest
 
       - name: Build & Push UI Image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/ui:latest ./ui
-          docker push ${{ secrets.DOCKER_USERNAME }}/ui:latest
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/uicicd:latest ./frontend/ui
+          docker push ${{ secrets.DOCKER_USERNAME }}/uicicd:latest
