@@ -11,7 +11,7 @@ image:
   # This sets the pull policy for images.
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "latest"
+  tag: "a3397a08d9ed95a3ddd9fcdceeb2718efd62af5c"
 
 env:
   MONGO_URI: mongodb://mongoh:27017/cartdb
